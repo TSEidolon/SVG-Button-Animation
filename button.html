@@ -64,7 +64,19 @@
     </clipPath>
     </defs>
     </svg>
-    
+    <!--  -->
+    <script>
+      const svg = document.getElementById ('triangles');
+
+      svg.onclick = (e) => {
+        const colors = ['red','blue','green','purple','pink','yellow'];
+        const rando = () => colors [Math.floor(Math.random()*colors.length)];
+        document.documentElement.style.cssText = `
+        --dark-color: ${rando()};
+        --light-color: ${rando()};
+        `
+      }
+    </script>
 
 
 </body>
